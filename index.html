@@ -22,8 +22,7 @@ body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt
 h1,h2,h3,.display{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase}
 .wrap{max-width:1120px;margin:0 auto;padding:0 1.1rem}
 a{color:inherit}
-/* chrome logo text like flyer */
-.chrome{background:linear-gradient(180deg,#fff 8%,#c7d2e2 30%,#6b7c93 48%,#e8eef7 52%,#8b9cb3 70%,#fff 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #000) drop-shadow(0 0 18px rgba(46,197,255,.25))}
+/* brand + hero logos are real artwork (assets/logo.jpg) */
 .brush{display:inline-block;font-family:Anton,sans-serif;font-style:italic;transform:rotate(-2deg);line-height:.95}
 .brush.blue{color:var(--blue);text-shadow:2px 2px 0 #fff,0 0 26px rgba(10,99,255,.6)}
 .brush.white{color:#fff;text-shadow:2px 2px 0 var(--blue),0 0 26px rgba(0,0,0,.8)}
@@ -34,9 +33,7 @@ a{color:inherit}
 header{position:sticky;top:0;z-index:50;background:rgba(4,6,11,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:4.4rem}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.brand-mark{width:2.6rem;height:2.6rem;border-radius:.7rem;background:radial-gradient(circle at 30% 20%,#123,#04060b),#04060b;border:1px solid var(--blue);display:flex;align-items:center;justify-content:center;color:var(--cyan);box-shadow:0 0 18px rgba(10,99,255,.5)}
-.brand-name{font-family:Anton;font-size:1.35rem;letter-spacing:.06em;line-height:1}
-.brand-sub{font-size:.6rem;letter-spacing:.34em;color:var(--cyan);font-weight:700}
+.brand-logo{height:2.9rem;width:auto;border-radius:.5rem;display:block}
 nav.links{display:flex;gap:1.5rem;font-size:.88rem;font-weight:600;color:#cfd8e6}
 nav.links a{text-decoration:none;opacity:.9}nav.links a:hover{color:var(--cyan)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-weight:800;border:0;border-radius:.8rem;padding:.9rem 1.5rem;font-size:.95rem;cursor:pointer;text-decoration:none;transition:.15s}
@@ -51,9 +48,7 @@ nav.links a{text-decoration:none;opacity:.9}nav.links a:hover{color:var(--cyan)}
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='64' viewBox='0 0 74 64'%3E%3Cpath d='M37 0l37 21v43L37 64 0 64V21z' fill='none' stroke='%230a63ff' stroke-opacity='.35'/%3E%3C/svg%3E");background-size:74px 64px}
 .hero::before{left:0}.hero::after{right:0}
 .hero-inner{position:relative;text-align:center;padding:3.2rem 0 2.4rem}
-.logo-car{width:min(420px,80vw);margin:0 auto .4rem;display:block;filter:drop-shadow(0 0 22px rgba(46,197,255,.45))}
-.logo-text{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1}
-.logo-tag{letter-spacing:.5em;font-size:.72rem;color:var(--cyan);font-weight:700;margin:.35rem 0 1.4rem}
+.hero-logo{width:min(460px,85vw);height:auto;margin:0 auto 1.2rem;display:block;border-radius:1rem;filter:drop-shadow(0 0 26px rgba(46,197,255,.35))}
 .hero h1{font-size:clamp(2.4rem,6.5vw,4.4rem);line-height:.98;margin-bottom:.5rem}
 .hero h1 .blue{color:var(--blue);-webkit-text-stroke:1px #fff;text-shadow:0 0 30px rgba(10,99,255,.7)}
 .hero .ew{font-style:italic;font-weight:800;font-size:clamp(1rem,2.6vw,1.35rem);color:#dbe6f5;margin-bottom:.4rem}
@@ -153,8 +148,7 @@ footer{background:#02040a;border-top:1px solid var(--line);padding:2.5rem 0 1.5r
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Detail Auto home">
-      <span class="brand-mark"><i class="fa-solid fa-car-side"></i></span>
-      <span><span class="brand-name chrome">DETAIL AUTO</span><br><span class="brand-sub">BRING BACK THE SHINE</span></span>
+      <img class="brand-logo" src="assets/logo.jpg" alt="Detail Auto — Bring back the shine" width="220" height="83">
     </a>
     <nav class="links" aria-label="Main">
       <a href="#prices">Price List</a>
@@ -180,9 +174,7 @@ footer{background:#02040a;border-top:1px solid var(--line);padding:2.5rem 0 1.5r
 <!-- HERO — flyer 2 -->
 <section class="hero" id="top">
   <div class="wrap hero-inner">
-    <svg class="logo-car" viewBox="0 0 420 70" aria-hidden="true"><path d="M10 55C60 50 90 44 130 22c12-7 28-10 45-10h40c22 0 40 8 55 22l25 8c14 4 22 8 24 13" fill="none" stroke="#2ec5ff" stroke-width="4" stroke-linecap="round"/><path d="M30 58c40-4 70-8 100-22" fill="none" stroke="#0a63ff" stroke-width="3" opacity=".7"/></svg>
-    <div class="logo-text chrome">DETAIL AUTO</div>
-    <div class="logo-tag">— BRING BACK THE SHINE —</div>
+    <img class="hero-logo" src="assets/logo.jpg" alt="Detail Auto — Bring back the shine" width="460" height="174" fetchpriority="high">
     <h1>DIRTY CAR?<br><span class="blue">NOT ON OUR WATCH.</span></h1>
     <p class="ew">WE TURN <b>“EW”</b> INTO <b>“OOOHH!”</b></p>
     <div class="ribbon">Because your car deserves more than a basic wash.</div>
@@ -192,7 +184,7 @@ footer{background:#02040a;border-top:1px solid var(--line);padding:2.5rem 0 1.5r
       <a class="btn btn-wa" href="https://wa.me/27827834676?text=Hi%20Ettienne%2C%20I%20would%20like%20to%20book%20a%20wash%20%2F%20detail." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Ettienne</a>
     </div>
     <div class="car-visual">
-      <img src="assets/hero-car.jpg" alt="Black sports car covered in foam and water at night — Detail Auto, Doornpoort" loading="eager" width="438" height="205">
+      <img src="assets/hero-car.jpg" alt="Black sports car covered in foam and water at night — Detail Auto, Doornpoort" loading="eager" width="574" height="275">
     </div>
     <div class="usps">
       <div class="usp"><i class="fa-solid fa-car-side"></i><h3>PROFESSIONAL DETAILING</h3><p>Inside &amp; Out</p></div>
@@ -209,7 +201,7 @@ footer{background:#02040a;border-top:1px solid var(--line);padding:2.5rem 0 1.5r
     <p class="kicker">Transparent pricing</p>
     <h2 class="title"><span class="brush blue">PRICE</span> <span class="brush white">LIST</span></h2>
     <p class="lead">Same prices as in-store. Small = Hatch / Sedan &nbsp;•&nbsp; Medium = SUV / Crossover &nbsp;•&nbsp; Large = Double Cab / Van</p>
-    <img class="price-banner" src="assets/foam-mustang.jpg" alt="Car covered in snow foam at Detail Auto" loading="lazy" width="438" height="160">
+    <img class="price-banner" src="assets/foam-mustang.jpg" alt="Car covered in snow foam at Detail Auto" loading="lazy" width="594" height="270">
     <div class="price-grid">
       <div>
         <div class="pl-card">
@@ -250,7 +242,7 @@ footer{background:#02040a;border-top:1px solid var(--line);padding:2.5rem 0 1.5r
       <aside>
         <div class="side-card">
           <h3>HEADLIGHT RESTORATION</h3>
-          <img class="hl-photo" src="assets/headlight.jpg" alt="Headlight restoration before and after — yellowed lens restored to clear" loading="lazy" width="410" height="470">
+          <img class="hl-photo" src="assets/headlight.jpg" alt="Headlight restoration before and after — yellowed lens restored to clear" loading="lazy" width="530" height="290">
           <div class="hl-price"><span>R400</span> A SET</div>
           <a class="btn btn-blue" style="width:100%" href="#book">Add + Book</a>
         </div>
@@ -278,7 +270,7 @@ footer{background:#02040a;border-top:1px solid var(--line);padding:2.5rem 0 1.5r
     <h2 class="title">BEFORE &amp; AFTER</h2>
     <p class="lead">Mud and grime gone, paint left glossy. Foggy, yellowed lights back to clear.</p>
     <div class="ba-photo">
-      <img src="assets/before-after.jpg" alt="Before and after: muddy car transformed to clean black finish at Detail Auto" loading="lazy" width="688" height="110">
+      <img src="assets/before-after.jpg" alt="Before and after: muddy car transformed to clean black finish at Detail Auto" loading="lazy" width="965" height="120">
     </div>
     <div class="clean-strip"><span>WE DON'T CUT CORNERS, WE <b style="color:var(--blue)">CLEAN</b> THEM.</span></div>
   </div>
